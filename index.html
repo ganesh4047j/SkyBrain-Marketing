@@ -1,0 +1,2316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyBrain Marketing | Digital Marketing & Tech Engineering</title>
+    <meta name="description" content="Prioritizing brand growth through strategic SEO, Market Research, and Social Media Dominance. We bridge the gap between data science and creative storytelling.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="SkyBrain Marketing | Digital Marketing Dominance">
+    <meta property="og:description" content="Elevate your brand with data-driven digital marketing and high-end tech engineering. Discover our 'Dominance' framework.">
+    <meta property="og:image" content="https://yourdomain.com/Assets/og-image.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/">
+    <meta property="twitter:title" content="SkyBrain Marketing | Digital Marketing Dominance">
+    <meta property="twitter:description" content="Elevate your brand with data-driven digital marketing and high-end tech engineering. Discover our 'Dominance' framework.">
+    <meta property="twitter:image" content="https://yourdomain.com/Assets/og-image.jpg">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-dark: #0a0e27;
+        --secondary-dark: #1a1f3a;
+        --accent-cyan: #00d2ff;
+        --accent-blue: #0066ff;
+        --accent-green: #92fe9d;
+        --text-light: #ffffff;
+        --text-muted: #a0a0a0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--primary-dark);
+        color: var(--text-light);
+        overflow-x: hidden;
+        line-height: 1.6;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* NAVIGATION */
+      .navbar-custom {
+        background: rgba(10, 14, 39, 0.95);
+        backdrop-filter: blur(20px);
+        padding: 1rem 0;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .navbar-custom.scrolled {
+        padding: 0.7rem 0;
+        background: rgba(10, 14, 39, 0.98);
+      }
+
+      .navbar-brand {
+        font-weight: 900;
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+        background: linear-gradient(
+          135deg,
+          var(--accent-cyan),
+          var(--accent-green)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .nav-link {
+        color: var(--text-light) !important;
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        position: relative;
+        padding: 0.5rem 1rem !important;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: var(--accent-cyan);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+
+      .nav-link:hover::after {
+        width: 70%;
+      }
+
+      .btn-hire {
+        background: linear-gradient(
+          135deg,
+          var(--accent-cyan),
+          var(--accent-blue)
+        ) !important;
+        color: white !important;
+        padding: 0.6rem 1.8rem !important;
+        border-radius: 50px !important;
+        font-weight: 700;
+        border: none;
+        transition: all 0.3s ease;
+        margin-left: 1rem;
+      }
+
+      .btn-hire:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(0, 210, 255, 0.4);
+      }
+
+      /* HERO SECTION */
+      .hero-section {
+        position: relative;
+        height: 100vh;
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .hero-bg {
+        position: absolute;
+        top: -15%;
+        left: 0;
+        width: 100%;
+        height: 130%;
+        background: linear-gradient(
+            135deg,
+            rgba(0, 102, 255, 0.15),
+            rgba(0, 210, 255, 0.15)
+          ),
+          url("Assets/A_futuristic_highend.jpeg")
+            center/cover no-repeat;
+        z-index: 1;
+        will-change: transform;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+          circle at center,
+          rgba(10, 14, 39, 0.3) 0%,
+          var(--primary-dark) 85%
+        );
+        z-index: 2;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        padding: 0 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .hero-title {
+        font-size: clamp(2.5rem, 7vw, 6rem);
+        font-weight: 900;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(
+          135deg,
+          #ffffff,
+          var(--accent-cyan),
+          var(--accent-green)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -1px;
+      }
+
+      .hero-subtitle {
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
+        color: var(--text-muted);
+        font-weight: 400;
+        margin-bottom: 2rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .floating-elements {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        pointer-events: none;
+      }
+
+      .float-item {
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(0, 210, 255, 0.15),
+          transparent
+        );
+        animation: float 20s infinite ease-in-out;
+        will-change: transform;
+      }
+
+      .float-item:nth-child(1) {
+        width: 250px;
+        height: 250px;
+        top: 15%;
+        left: 10%;
+        animation-delay: 0s;
+      }
+
+      .float-item:nth-child(2) {
+        width: 180px;
+        height: 180px;
+        top: 55%;
+        right: 12%;
+        animation-delay: 5s;
+      }
+
+      .float-item:nth-child(3) {
+        width: 130px;
+        height: 130px;
+        bottom: 25%;
+        left: 18%;
+        animation-delay: 10s;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0);
+        }
+        25% {
+          transform: translate3d(20px, -30px, 0);
+        }
+        50% {
+          transform: translate3d(-20px, -50px, 0);
+        }
+        75% {
+          transform: translate3d(10px, -25px, 0);
+        }
+      }
+
+      /* SECTION STYLES */
+      .section-padding {
+        padding: 100px 0;
+        position: relative;
+      }
+
+      .section-title {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        font-weight: 900;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .section-subtitle {
+        color: var(--accent-cyan);
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        margin-bottom: 0.8rem;
+        display: inline-block;
+      }
+
+      .gradient-text {
+        background: linear-gradient(
+          135deg,
+          var(--accent-cyan),
+          var(--accent-green)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* MARKETING SECTION */
+      .marketing-section {
+        background: linear-gradient(
+          180deg,
+          var(--primary-dark) 0%,
+          var(--secondary-dark) 100%
+        );
+      }
+
+      .feature-badge {
+        display: inline-block;
+        padding: 0.7rem 1.3rem;
+        border: 2px solid var(--accent-cyan);
+        border-radius: 50px;
+        color: var(--accent-cyan);
+        font-weight: 600;
+        font-size: 0.85rem;
+        transition: all 0.3s ease;
+        margin: 0.4rem;
+        cursor: pointer;
+      }
+
+      .feature-badge:hover {
+        background: var(--accent-cyan);
+        color: var(--primary-dark);
+        transform: translateY(-3px);
+      }
+
+      .parallax-image {
+        width: 100%;
+        max-width: 550px;
+        height: auto;
+        border-radius: 20px;
+        filter: drop-shadow(0 20px 60px rgba(0, 210, 255, 0.25));
+        will-change: transform;
+      }
+
+      .content-wrapper {
+        max-width: 600px;
+      }
+
+      /* SERVICES SECTION */
+      .services-section {
+        background: var(--primary-dark);
+      }
+
+      .service-card {
+        background: var(--secondary-dark);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        padding: 0;
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .service-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 210, 255, 0.08),
+          rgba(146, 254, 157, 0.08)
+        );
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-12px);
+        border-color: var(--accent-cyan);
+        box-shadow: 0 20px 60px rgba(0, 210, 255, 0.3);
+      }
+
+      .service-card:hover::before {
+        opacity: 1;
+      }
+
+      .service-image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 280px;
+        overflow: hidden;
+        border-radius: 24px 24px 0 0;
+      }
+
+      .service-card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .service-card:hover .service-card-image {
+        transform: scale(1.1);
+      }
+
+      .service-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .service-card:hover .service-overlay {
+        opacity: 1;
+      }
+
+      .service-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 1.5rem 1rem 0.8rem;
+        position: relative;
+        z-index: 1;
+        color: var(--text-light);
+      }
+
+      .service-description {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        padding: 0 1.5rem 1.8rem;
+        position: relative;
+        z-index: 1;
+        margin: 0;
+      }
+
+      /* SERVICE MODAL */
+      .service-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .service-modal.active {
+        display: flex;
+      }
+
+      .modal-backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(10, 14, 39, 0.95);
+        backdrop-filter: blur(10px);
+        animation: fadeIn 0.3s ease;
+        z-index: 9998; /* ensure backdrop is below modal content */
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .modal-content-wrapper {
+        position: relative;
+        background: var(--secondary-dark);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 30px;
+        max-width: 1100px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5);
+        z-index: 10000; /* ensure content appears above backdrop */
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px) scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        background: var(--accent-cyan);
+        border: none;
+        border-radius: 50%;
+        color: white;
+        font-size: 1.3rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-close:hover {
+        transform: rotate(90deg) scale(1.1);
+        background: var(--accent-blue);
+      }
+
+      .modal-body {
+        padding: 3rem;
+      }
+
+      .modal-image {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .modal-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: var(--text-light);
+        background: linear-gradient(
+          135deg,
+          var(--accent-cyan),
+          var(--accent-green)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .modal-text {
+        color: var(--text-muted);
+        font-size: 1.05rem;
+        line-height: 1.8;
+      }
+
+      .modal-text h4 {
+        color: var(--accent-cyan);
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-top: 1.5rem;
+        margin-bottom: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .modal-text ul {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0;
+      }
+
+      .modal-text ul li {
+        padding: 0.6rem 0;
+        padding-left: 1.8rem;
+        position: relative;
+      }
+
+      .modal-text ul li::before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: var(--accent-cyan);
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+
+      .modal-text p {
+        margin-bottom: 1rem;
+      }
+
+      /* TEAM SECTION */
+      .team-section {
+        background: linear-gradient(
+          180deg,
+          var(--secondary-dark) 0%,
+          var(--primary-dark) 100%
+        );
+      }
+
+      .team-card {
+        background: var(--secondary-dark);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 30px;
+        padding: 3rem 2.5rem;
+        text-align: center;
+        transition: all 0.4s ease;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .team-card:hover {
+        transform: scale(1.03);
+        border-color: var(--accent-cyan);
+        box-shadow: 0 25px 70px rgba(0, 210, 255, 0.25);
+      }
+
+      .profile-wrapper {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto 1.8rem;
+        border-radius: 50%;
+        border: 4px solid var(--accent-cyan);
+        padding: 6px;
+        position: relative;
+        overflow: hidden;
+        background: var(--secondary-dark);
+      }
+
+      .profile-wrapper::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: conic-gradient(
+          from 0deg,
+          var(--accent-cyan),
+          var(--accent-green),
+          var(--accent-cyan)
+        );
+        animation: rotate 4s linear infinite;
+        z-index: -1;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .profile-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        background: var(--secondary-dark);
+      }
+
+      .team-name {
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .team-role {
+        color: var(--accent-cyan);
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 2rem;
+      }
+
+      .skill-badge {
+        display: inline-block;
+        background: linear-gradient(
+          135deg,
+          var(--accent-blue),
+          var(--accent-cyan)
+        );
+        padding: 0.7rem 1.3rem;
+        border-radius: 50px;
+        margin: 0.4rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .skill-badge:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+      }
+
+      /* FAQ SECTION */
+      .faq-section {
+        background: var(--secondary-dark);
+      }
+
+      .faq-item {
+        background: var(--primary-dark);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .faq-item:hover {
+        border-color: var(--accent-cyan);
+      }
+
+      .faq-question {
+        padding: 1.8rem 2rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-light);
+        user-select: none;
+        transition: all 0.3s ease;
+      }
+
+      .faq-question:hover {
+        color: var(--accent-cyan);
+      }
+
+      .faq-question i {
+        color: var(--accent-cyan);
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+      }
+
+      .faq-question.active i {
+        transform: rotate(180deg);
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        padding: 0 2rem;
+      }
+
+      .faq-answer.active {
+        max-height: 500px;
+        padding: 0 2rem 1.8rem 2rem;
+      }
+
+      .faq-answer p {
+        color: var(--text-muted);
+        line-height: 1.8;
+        margin: 0;
+      }
+
+      /* STATS SECTION */
+      .stats-section {
+        background: linear-gradient(
+          135deg,
+          var(--accent-cyan),
+          var(--accent-blue)
+        );
+        padding: 70px 0;
+        color: var(--primary-dark);
+      }
+
+      .stat-item {
+        text-align: center;
+        padding: 1.5rem 1rem;
+      }
+
+      .stat-number {
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        font-weight: 900;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* CONTACT SECTION */
+      .contact-footer-section {
+        background: var(--primary-dark);
+        padding: 90px 0 0;
+        position: relative;
+      }
+
+      .contact-content {
+        color: var(--text-light);
+      }
+
+      .contact-title {
+        font-size: clamp(2rem, 4.5vw, 3.2rem);
+        font-weight: 900;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        background: linear-gradient(
+          135deg,
+          var(--accent-cyan),
+          var(--accent-green)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .contact-description {
+        color: var(--text-muted);
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 2.5rem;
+      }
+
+      .contact-info {
+        margin-bottom: 3rem;
+      }
+
+      .contact-info a,
+      .contact-address {
+        color: var(--text-light);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.2rem;
+        transition: all 0.3s ease;
+        padding: 0.5rem 0;
+      }
+
+      .contact-info a:hover {
+        color: var(--accent-cyan);
+        transform: translateX(8px);
+      }
+
+      .contact-info i {
+        color: var(--accent-cyan);
+        margin-right: 1rem;
+        font-size: 1.2rem;
+        min-width: 30px;
+      }
+
+      .footer-info {
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        margin-top: 2rem;
+      }
+
+      .footer-info p {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        margin: 0;
+      }
+
+      .contact-form {
+        background: var(--secondary-dark);
+        padding: 2.8rem;
+        border-radius: 28px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .form-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 1.8rem;
+        color: var(--text-light);
+      }
+
+      .form-control-custom {
+        background: var(--primary-dark);
+        border: 2px solid rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
+        padding: 1rem 1.4rem;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        width: 100%;
+        margin-bottom: 1.2rem;
+        color: var(--text-light);
+      }
+
+      .form-control-custom::placeholder {
+        color: var(--text-muted);
+      }
+
+      .form-control-custom:focus {
+        border-color: var(--accent-cyan);
+        box-shadow: 0 0 0 0.2rem rgba(0, 210, 255, 0.15);
+        outline: none;
+        background: var(--primary-dark);
+      }
+
+      .btn-submit {
+        background: linear-gradient(
+          135deg,
+          var(--accent-cyan),
+          var(--accent-blue)
+        );
+        color: white;
+        padding: 1rem 2.5rem;
+        border: none;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 700;
+        width: 100%;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+      }
+
+      .btn-submit:hover:not(:disabled) {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(0, 210, 255, 0.4);
+      }
+
+      .btn-submit:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+
+      .btn-submit i {
+        font-size: 1.1rem;
+      }
+
+      .form-status {
+        margin-top: 1rem;
+        padding: 0.8rem;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .form-status.success {
+        background: rgba(146, 254, 157, 0.2);
+        color: var(--accent-green);
+      }
+
+      /* FOOTER STYLES */
+      footer {
+        background: var(--primary-dark);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 40px 0; /* Increased padding for a more premium feel */
+      }
+
+      .footer-copyright {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        margin: 0;
+      }
+
+      .footer-copyright strong {
+        color: var(--accent-cyan);
+        font-weight: 700;
+      }
+
+      .footer-credits {
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* ANIMATIONS */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .slide-left {
+        opacity: 0;
+        transform: translateX(-80px);
+        transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      .slide-left.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .slide-right {
+        opacity: 0;
+        transform: translateX(80px);
+        transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      .slide-right.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 991px) {
+        .section-padding {
+          padding: 70px 0;
+        }
+
+        .btn-hire {
+          margin-left: 0 !important;
+          margin-top: 0.5rem;
+        }
+
+        .parallax-image {
+          max-width: 100%;
+          margin-top: 2rem;
+        }
+
+        .contact-form {
+          margin-top: 2rem;
+        }
+
+        .modal-body {
+          padding: 2rem;
+        }
+
+        .modal-title {
+          font-size: 1.8rem;
+        }
+
+        .modal-image {
+          margin-bottom: 2rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .navbar-brand {
+          font-size: 1.1rem;
+        }
+
+        footer {
+          padding: 30px 0;
+        }
+        .footer-credits {
+          margin-top: 10px;
+        }
+
+        .hero-title {
+          font-size: 2.5rem;
+        }
+
+        .section-padding {
+          padding: 60px 0;
+        }
+
+        .contact-form {
+          padding: 2rem;
+        }
+
+        .service-card {
+          padding: 0;
+        }
+
+        .service-image-wrapper {
+          height: 220px;
+        }
+
+        .modal-content-wrapper {
+          max-height: 85vh;
+          border-radius: 20px;
+        }
+
+        .modal-body {
+          padding: 1.5rem;
+        }
+
+        .modal-close {
+          width: 40px;
+          height: 40px;
+          font-size: 1.1rem;
+        }
+
+        .modal-title {
+          font-size: 1.6rem;
+        }
+
+        .contact-footer-section {
+          padding: 60px 0 0;
+        }
+      }
+
+      /* ACCESSIBILITY */
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible,
+      textarea:focus-visible {
+        outline: 3px solid var(--accent-cyan);
+        outline-offset: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
+      <div class="container">
+        <a class="navbar-brand" href="#" aria-label="Sky Brain Softwares Home"
+          >SKYBRAIN MARKETING</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#services">SERVICES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">OUR TEAM</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn-hire" href="#contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-overlay"></div>
+      <div class="floating-elements">
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">SKYBRAIN MARKETING</h1>
+        <p class="hero-subtitle">
+          Prioritizing Growth with Digital Marketing Dominance
+        </p>
+      </div>
+    </section>
+
+    <!-- MARKETING SECTION -->
+    <section id="marketing" class="marketing-section section-padding">
+      <div class="container">
+        <div class="row align-items-center g-5 mb-5">
+          <div class="col-lg-6 slide-left">
+            <div class="content-wrapper">
+              <p class="section-subtitle">THE CORE STRATEGY</p>
+              <h2 class="section-title">
+                DIGITAL<br /><span class="gradient-text">MARKETING</span>
+              </h2>
+              <p
+                class="lead mb-3"
+                style="color: var(--text-light); font-weight: 600"
+              >
+                More Than Just Clicks—It's Connection.
+              </p>
+              <p
+                class="mb-4"
+                style="
+                  color: var(--text-muted);
+                  font-size: 1.05rem;
+                  line-height: 1.7;
+                "
+              >
+                Digital marketing is the strategic orchestration of online
+                channels to connect brands with their ideal audiences. At
+                <strong>SkyBrain</strong>, we define it as the intersection of
+                <strong>data science</strong> and
+                <strong>creative storytelling</strong>. It is the engine that
+                drives modern business, utilizing everything from search
+                algorithms to social psychology to turn casual browsers into
+                loyal brand advocates.
+              </p>
+              <p
+                class="mb-4"
+                style="
+                  color: var(--text-muted);
+                  font-size: 1.05rem;
+                  line-height: 1.7;
+                "
+              >
+                In an era where attention is the new currency, our intensive
+                marketing services ensure your brand doesn't just join the
+                conversation—it leads it.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center slide-right">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800"
+              alt="Digital Strategy Overview"
+              class="parallax-image"
+              style="
+                border-radius: 30px;
+                border: 1px solid rgba(0, 210, 255, 0.3);
+              "
+            />
+          </div>
+        </div>
+
+        <div class="row g-4 mt-5 fade-in">
+          <div class="col-12 text-center mb-4">
+            <h3
+              class="gradient-text"
+              style="font-weight: 800; letter-spacing: 1px"
+            >
+              OUR MARKETING PILLARS
+            </h3>
+          </div>
+
+          <div class="col-md-4">
+            <div
+              class="p-4"
+              style="
+                background: rgba(255, 255, 255, 0.03);
+                border-radius: 20px;
+                height: 100%;
+                border-left: 4px solid var(--accent-cyan);
+              "
+            >
+              <h5
+                class="mb-3"
+                style="color: var(--accent-cyan); font-weight: 700"
+              >
+                Search Engine Optimization (SEO)
+              </h5>
+              <p class="small">
+                The art of visibility. We optimize your digital DNA to rank
+                higher, stay longer, and convert faster on search engines like
+                Google and Bing.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div
+              class="p-4"
+              style="
+                background: rgba(255, 255, 255, 0.03);
+                border-radius: 20px;
+                height: 100%;
+                border-left: 4px solid var(--accent-green);
+              "
+            >
+              <h5
+                class="mb-3"
+                style="color: var(--accent-green); font-weight: 700"
+              >
+                Social Media Marketing (SMM)
+              </h5>
+              <p class="small">
+                Community-driven growth. We leverage platforms like Instagram,
+                LinkedIn, and Facebook to build human connections and viral
+                reach.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div
+              class="p-4"
+              style="
+                background: rgba(255, 255, 255, 0.03);
+                border-radius: 20px;
+                height: 100%;
+                border-left: 4px solid var(--accent-blue);
+              "
+            >
+              <h5
+                class="mb-3"
+                style="color: var(--accent-blue); font-weight: 700"
+              >
+                Performance Marketing
+              </h5>
+              <p class="small">
+                ROI-focused advertising. From PPC to Lead Generation, every
+                dollar spent is tracked and optimized for maximum conversion.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <p class="text-muted mb-4">
+              Click below to dive into our specific 5-minute deep dives:
+            </p>
+            <div class="mt-2">
+              <span
+                class="feature-badge marketing-badge"
+                data-service="seo"
+                role="button"
+                >Strategic SEO Deep-Dive</span
+              >
+              <span
+                class="feature-badge marketing-badge"
+                data-service="market-research"
+                role="button"
+                >Research Methodology</span
+              >
+              <span
+                class="feature-badge marketing-badge"
+                data-service="social-media"
+                role="button"
+                >Social Media Marketing</span
+              >
+              <span
+                class="feature-badge marketing-badge"
+                data-service="analytics"
+                role="button"
+                >Brand Analytics</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services-section section-padding">
+      <div class="container">
+        <div class="text-center mb-5 fade-in">
+          <p class="section-subtitle">WHAT WE DO</p>
+          <h2 class="section-title">
+            YOUR WEB DESIGN <span class="gradient-text">PARTNER</span>
+          </h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 fade-in">
+            <div
+              class="service-card clickable-card"
+              data-service="ux-design"
+              role="button"
+              tabindex="0"
+              aria-controls="serviceModal"
+              aria-expanded="false"
+            >
+              <div class="service-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600"
+                  alt="UX Design Process"
+                  class="service-card-image"
+                />
+                <div class="service-overlay">
+                  <i
+                    class="fas fa-search-plus"
+                    style="font-size: 2rem; color: white"
+                  ></i>
+                </div>
+              </div>
+              <h3 class="service-title">UX Design</h3>
+              <p class="service-description">
+                Creating intuitive and engaging user experiences
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 fade-in">
+            <div
+              class="service-card clickable-card"
+              data-service="ui-design"
+              role="button"
+              tabindex="0"
+              aria-controls="serviceModal"
+              aria-expanded="false"
+            >
+              <div class="service-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600"
+                  alt="UI Design Interface"
+                  class="service-card-image"
+                />
+                <div class="service-overlay">
+                  <i
+                    class="fas fa-search-plus"
+                    style="font-size: 2rem; color: white"
+                  ></i>
+                </div>
+              </div>
+              <h3 class="service-title">UI Design</h3>
+              <p class="service-description">
+                Crafting beautiful and functional interfaces
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 fade-in">
+            <div
+              class="service-card clickable-card"
+              data-service="web-development"
+              role="button"
+              tabindex="0"
+              aria-controls="serviceModal"
+              aria-expanded="false"
+            >
+              <div class="service-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600"
+                  alt="Web Development Code"
+                  class="service-card-image"
+                />
+                <div class="service-overlay">
+                  <i
+                    class="fas fa-search-plus"
+                    style="font-size: 2rem; color: white"
+                  ></i>
+                </div>
+              </div>
+              <h3 class="service-title">Web Development</h3>
+              <p class="service-description">
+                Building robust and scalable web solutions
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE MODAL -->
+    <div
+      class="service-modal"
+      id="serviceModal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      tabindex="-1"
+    >
+      <div class="modal-backdrop"></div>
+      <div class="modal-content-wrapper">
+        <button class="modal-close" aria-label="Close modal">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-body">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <img src="" alt="" class="modal-image" id="modalImage" />
+            </div>
+            <div class="col-lg-6">
+              <h3 class="modal-title" id="modalTitle"></h3>
+              <div class="modal-text" id="modalText"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEAM SECTION -->
+    <section id="team" class="team-section section-padding">
+      <div class="container">
+        <div class="text-center mb-5 fade-in">
+          <p class="section-subtitle">MEET THE TEAM</p>
+          <h2 class="section-title">
+            OUR <span class="gradient-text">LEADERSHIP</span>
+          </h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-8 fade-in">
+            <div class="team-card">
+              <div class="profile-wrapper">
+                <img
+                  src="Assets/profile.JPG"
+                  alt="Jaiten Jesuraj J - Founder and Director"
+                />
+              </div>
+              <h3 class="team-name">Jaiten Jesuraj . J</h3>
+              <p class="team-role">Founder & Director</p>
+              <div>
+                <span class="skill-badge">Digital Marketing</span>
+                <span class="skill-badge">Web Designing</span>
+                <span class="skill-badge">Full-Stack Dev</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US / FAQ SECTION -->
+    <section id="faq" class="faq-section section-padding">
+      <div class="container">
+        <div class="text-center mb-5 fade-in">
+          <p class="section-subtitle">WHY CHOOSE US</p>
+          <h2 class="section-title">
+            FREQUENTLY ASKED <span class="gradient-text">QUESTIONS</span>
+          </h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="faq-item fade-in">
+              <div class="faq-question">
+                <span>What services does SkyBrain Marketing offer?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  We specialize in comprehensive digital marketing services, web
+                  design and development, UI/UX planning, full-stack
+                  development, e-commerce solutions, and ongoing maintenance and
+                  support. Our primary focus is driving measurable growth
+                  through strategic digital marketing dominance.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item fade-in">
+              <div class="faq-question">
+                <span>How long does it take to build a website?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  The timeline varies based on project complexity. A basic
+                  website typically takes 2-4 weeks, while more complex
+                  e-commerce or custom web applications may take 6-12 weeks. We
+                  provide detailed project timelines during our initial
+                  consultation.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item fade-in">
+              <div class="faq-question">
+                <span
+                  >Do you provide ongoing support after project
+                  completion?</span
+                >
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes! We offer comprehensive maintenance and support packages
+                  to ensure your website remains secure, updated, and performing
+                  optimally. Our support includes regular backups, security
+                  updates, content updates, and technical assistance.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item fade-in">
+              <div class="faq-question">
+                <span
+                  >What makes your digital marketing approach different?</span
+                >
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  We prioritize growth with data-driven strategies that deliver
+                  measurable results. Our approach combines strategic SEO,
+                  comprehensive market research, content strategy, and brand
+                  analytics to create sustainable success for your business.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item fade-in">
+              <div class="faq-question">
+                <span>Can you help with branding and UI/UX design?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Absolutely! Our UI/UX planning services include wireframes,
+                  mockups, brand identity development, interactive prototypes,
+                  and user testing to ensure your digital presence is both
+                  beautiful and effective.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item fade-in">
+              <div class="faq-question">
+                <span>Do you work with clients outside of India?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes, we work with clients globally! We have experience
+                  collaborating with businesses worldwide and use modern
+                  communication tools to ensure smooth project coordination
+                  regardless of location.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item fade-in">
+              <div class="faq-question">
+                <span>What is your pricing structure?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Our pricing is customized based on project scope, complexity,
+                  and requirements. We offer competitive rates and transparent
+                  pricing with no hidden fees. Contact us for a free
+                  consultation and detailed quote tailored to your specific
+                  needs.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item fade-in">
+              <div class="faq-question">
+                <span>How do I get started with my project?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Simply reach out via email at skybrainsoftwares@gmail.com or
+                  call us at +91 770-891-0376. We'll schedule a consultation to
+                  discuss your goals, provide recommendations, and create a
+                  customized plan to bring your vision to life.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section id="stats" class="stats-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-lg-3">
+            <div class="stat-item fade-in">
+              <div class="stat-number">2022</div>
+              <div class="stat-label">Established</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-item fade-in">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Project</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-item fade-in">
+              <div class="stat-number">12+</div>
+              <div class="stat-label">Customers</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-item fade-in">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Employees</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-footer-section">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-5 fade-in">
+            <div class="contact-content">
+              <p class="section-subtitle" style="color: var(--accent-cyan)">
+                GET IN TOUCH
+              </p>
+              <h2 class="contact-title">Wanna Hatch Some Websites?</h2>
+              <p class="contact-description">
+                Let's bring your vision to life with cutting-edge web solutions
+                and digital marketing strategies.
+              </p>
+
+              <div class="contact-info">
+                <a
+                  href="mailto:skybrainsoftwares@gmail.com"
+                  aria-label="Email Sky Brain Softwares"
+                >
+                  <i class="fas fa-envelope"></i>
+                  <span>skybrainsoftwares@gmail.com</span>
+                </a>
+                <a
+                  href="tel:+917708910376"
+                  aria-label="Call Sky Brain Softwares"
+                >
+                  <i class="fas fa-phone"></i>
+                  <span>+91 770-891-0376</span>
+                </a>
+                <div class="contact-address">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Kumbakonam, Tamil Nadu, India</span>
+                </div>
+                <div
+                  class="social-icons d-flex mt-3 justify-content-start"
+                  aria-label="Social Media Links"
+                >
+                  <a href="" target="_blank"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href="" target="_blank"><i class="fab fa-facebook"></i></a>
+                  <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 fade-in">
+            <div class="contact-form">
+              <h4 class="form-title">Send Us a Message</h4>
+              <form id="contactForm">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control-custom"
+                      placeholder="Your Name"
+                      name="name"
+                      required
+                      aria-label="Full Name"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control-custom"
+                      placeholder="Your Email"
+                      name="email"
+                      required
+                      aria-label="Email Address"
+                    />
+                  </div>
+                </div>
+                <input
+                  type="text"
+                  class="form-control-custom"
+                  placeholder="Subject"
+                  name="subject"
+                  aria-label="Subject"
+                />
+                <textarea
+                  class="form-control-custom"
+                  rows="5"
+                  placeholder="Your Message"
+                  name="message"
+                  required
+                  aria-label="Your Message"
+                ></textarea>
+                <button type="submit" class="btn-submit">
+                  <span>Send Message</span>
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+                <div
+                  class="form-status"
+                  style="display: none"
+                  role="status"
+                  aria-live="polite"
+                ></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="footer-copyright">
+              &copy; 2024 <strong>SkyBrain Marketing</strong>. All rights reserved.
+            </p>
+          </div>
+
+          <div class="col-md-6 text-center text-md-end">
+            <p class="footer-credits mb-0">
+              <i class="fas fa-bolt me-2" style="color: var(--accent-green);"></i>
+              Powered by Innovation
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        // SERVICE DATA
+        const serviceData = {
+          "ux-design": {
+            title: "UX Design",
+            image:
+              "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800",
+            content: `
+                        <p>At Sky Brain Softwares, we believe great design starts with understanding your users. Our UX Design services focus on creating intuitive, engaging experiences that keep users coming back.</p>
+                        
+                        <h4>Our Approach</h4>
+                        <ul>
+                            <li><strong>User Research:</strong> We dive deep into understanding your target audience, their needs, behaviors, and pain points through comprehensive research methods.</li>
+                            <li><strong>Information Architecture:</strong> We structure and organize your content in a way that makes sense to users, ensuring easy navigation and findability.</li>
+                            <li><strong>User Journey Mapping:</strong> We map out every touchpoint in the user's journey to identify opportunities for improvement and optimization.</li>
+                            <li><strong>Wireframing & Prototyping:</strong> We create detailed wireframes and interactive prototypes to test and refine the user experience before development begins.</li>
+                        </ul>
+
+                        <h4>Why Choose Our UX Services</h4>
+                        <p>Our data-driven approach ensures that every design decision is backed by user insights and business goals. We don't just make things look good—we make them work better for your users and your business.</p>
+                    `,
+          },
+          "ui-design": {
+            title: "UI Design",
+            image:
+              "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800",
+            content: `
+                        <p>Beautiful interfaces that captivate and convert. Our UI Design services combine aesthetics with functionality to create visually stunning digital experiences.</p>
+                        
+                        <h4>What We Deliver</h4>
+                        <ul>
+                            <li><strong>Visual Design:</strong> We create polished, professional designs that align with your brand identity and appeal to your target audience.</li>
+                            <li><strong>Design Systems:</strong> We build comprehensive design systems that ensure consistency across all your digital touchpoints.</li>
+                            <li><strong>Responsive Design:</strong> Every interface we create works flawlessly across all devices and screen sizes.</li>
+                            <li><strong>Micro-interactions:</strong> We add delightful animations and transitions that enhance usability and create memorable experiences.</li>
+                        </ul>
+
+                        <h4>Our Design Philosophy</h4>
+                        <p>We believe that great UI design is invisible—it guides users effortlessly through their tasks without drawing attention to itself. Our designs are clean, modern, and purposeful.</p>
+                    `,
+          },
+          "web-development": {
+            title: "Web Development",
+            image:
+              "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800",
+            content: `
+                        <p>Transform your vision into reality with our full-stack web development services. We build fast, secure, and scalable web solutions tailored to your business needs.</p>
+                        
+                        <h4>Our Technical Expertise</h4>
+                        <ul>
+                            <li><strong>Front-End Development:</strong> We use modern frameworks like React, Vue, and Angular to create dynamic, responsive interfaces.</li>
+                            <li><strong>Back-End Development:</strong> Our robust server-side solutions use Node.js, Python, and PHP to power your applications.</li>
+                            <li><strong>E-Commerce Solutions:</strong> We build custom e-commerce platforms with secure payment integration and inventory management.</li>
+                            <li><strong>CMS Development:</strong> We create custom content management systems or work with platforms like WordPress and Drupal.</li>
+                        </ul>
+
+                        <h4>Quality Assurance</h4>
+                        <p>Every project undergoes rigorous testing to ensure optimal performance, security, and cross-browser compatibility. We deliver clean, maintainable code that's built to last.</p>
+
+                        <h4>Ongoing Support</h4>
+                        <p>Our relationship doesn't end at launch. We provide ongoing maintenance, updates, and technical support to keep your website running smoothly.</p>
+                    `,
+          },
+        };
+
+        const marketingData = {
+          seo: {
+            title: "Strategic SEO: The Science of Search",
+            image:
+              "Assets/Strategic_seo.jpeg",
+            content: `
+            <p>SEO is the backbone of organic growth. In this 5-minute guide, we break down how SkyBrain achieves search dominance.</p>
+            <h4>1. Technical Architecture</h4>
+            <p>We ensure search bots can crawl your site with zero friction. This includes optimizing your site map, robots.txt, and implementing advanced schema markup.</p>
+            <h4>2. Content Authority (E-E-A-T)</h4>
+            <p>Google prioritizes Experience, Expertise, Authoritativeness, and Trustworthiness. We craft content that satisfies user intent while building your brand as a topical authority.</p>
+            <h4>3. The Backlink Ecosystem</h4>
+            <p>We don't just "get links." We build relationships. Our PR-driven approach secures high-authority mentions from reputable industry sites, boosting your domain rating significantly.</p>
+            <p><strong>The Result:</strong> Sustainable, compounding traffic that lowers your cost-per-acquisition over time.</p>
+        `,
+          },
+          "market-research": {
+            title: "Market Research: Identifying The Gap",
+            image:
+              "Assets/Market_research_identifying.jpeg",
+            content: `
+            <p>Before spending a single rupee on ads, we listen. Market research is the "Intelligence" phase of our Dominance framework.</p>
+            <h4>Competitor Benchmarking</h4>
+            <p>We analyze your top 5 competitors to see where they are winning and—more importantly—where they are failing to satisfy customers.</p>
+            <h4>Psychographic Profiling</h4>
+            <p>We go beyond age and location. We identify the pain points, desires, and digital habits of your ideal customer. Are they scrolling LinkedIn at 8 AM or Instagram at 11 PM?</p>
+            <h4>Gap Analysis</h4>
+            <p>We find the "blue ocean" in your industry—the untapped needs that your brand can uniquely fulfill. This ensures your marketing message hits with maximum impact.</p>
+        `,
+          },
+          "social-media": {
+            title: "SMM: Building a Digital Community",
+            image:
+              "Assets/Smm_building.jpeg",
+            content: `
+            <p>Social Media Marketing is no longer just about posting photos. It is about building a living, breathing community around your brand.</p>
+            <h4>Platform-Specific Strategy</h4>
+            <p>Instagram is for aesthetics and storytelling; LinkedIn is for authority and B2B networking; Facebook is for community and granular ad targeting. We optimize your content for the specific "vibe" of each platform.</p>
+            <h4>The Viral Loop</h4>
+            <p>We create "shareable" assets—infographics, short-form reels, and controversial thought pieces that encourage your audience to do the marketing for you.</p>
+            <h4>Influencer Synergy</h4>
+            <p>We connect you with micro-influencers whose audiences trust them implicitly, creating a bridge of credibility to your brand.</p>
+        `,
+          },
+          analytics: {
+            title: "Brand Analytics: Decisions over Guesses",
+            image:
+              "Assets/Brand_analytics_decisions.jpeg",
+            content: `
+            <p>Data is just noise without interpretation. Our analytics service turns numbers into clear business directives.</p>
+            <h4>Full-Funnel Tracking</h4>
+            <p>We track the user journey from the first ad click to the final checkout, identifying exactly where users drop off so we can fix the leak.</p>
+            <h4>Attribution Modeling</h4>
+            <p>Did the Instagram ad cause the sale, or was it the follow-up email? Our attribution models tell you which channels are truly driving your revenue.</p>
+            <h4>Predictive Forecasting</h4>
+            <p>Using historical data, we predict future trends and seasonal shifts, allowing you to scale your ad spend during peak conversion windows.</p>
+        `,
+          },
+        };
+
+        document.querySelectorAll(".marketing-badge").forEach((badge) => {
+          badge.addEventListener("click", function () {
+            const serviceKey = this.getAttribute("data-service");
+            const data = marketingData[serviceKey];
+            if (data) {
+              openModal(data, this);
+            }
+          });
+        });
+
+        // SERVICE MODAL FUNCTIONALITY (updated: keyboard support, focus trap, aria handling)
+        const modal = document.getElementById("serviceModal");
+        const modalImage = document.getElementById("modalImage");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalText = document.getElementById("modalText");
+        const modalClose = document.querySelector(".modal-close");
+        const modalBackdrop = document.querySelector(".modal-backdrop");
+
+        let lastFocusedElement = null;
+        let modalKeyHandler = null;
+
+        // helper - set aria-hidden on page content (exclude modal)
+        function setBackgroundInert(isModalOpen) {
+          Array.from(document.body.children).forEach((child) => {
+            if (child === modal) return;
+            // skip scripts and style tags
+            if (child.tagName === "SCRIPT" || child.tagName === "STYLE") return;
+            child.setAttribute("aria-hidden", isModalOpen ? "true" : "false");
+          });
+        }
+
+        // focus trap for modal (simple)
+        function trapFocus(e) {
+          if (e.key !== "Tab") return;
+          const focusables = modal.querySelectorAll(
+            'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+          );
+          if (!focusables.length) return;
+          const first = focusables[0];
+          const last = focusables[focusables.length - 1];
+
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+
+        function openModal(data, triggerEl) {
+          if (!modal) return;
+          lastFocusedElement = triggerEl || document.activeElement;
+          modalImage.src = data.image;
+          modalImage.alt = data.title;
+          modalTitle.textContent = data.title;
+          modalText.innerHTML = data.content;
+          modal.classList.add("active");
+          modal.setAttribute("aria-hidden", "false");
+          modal.focus();
+          document.body.style.overflow = "hidden";
+          setBackgroundInert(true);
+
+          // update aria-expanded on triggering element
+          if (triggerEl) triggerEl.setAttribute("aria-expanded", "true");
+
+          // focus close button
+          const closeBtn = modal.querySelector(".modal-close");
+          if (closeBtn) closeBtn.focus();
+
+          // attach key trap and esc handler
+          modalKeyHandler = (ev) => {
+            if (ev.key === "Escape") closeModal();
+            trapFocus(ev);
+          };
+          document.addEventListener("keydown", modalKeyHandler, true);
+        }
+
+        function closeModal() {
+          if (!modal) return;
+          modal.classList.remove("active");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+          setBackgroundInert(false);
+
+          // restore aria-expanded on any clickable-card
+          document
+            .querySelectorAll('.clickable-card[aria-expanded="true"]')
+            .forEach((el) => el.setAttribute("aria-expanded", "false"));
+
+          if (
+            lastFocusedElement &&
+            typeof lastFocusedElement.focus === "function"
+          ) {
+            lastFocusedElement.focus();
+          }
+
+          // remove key handler
+          if (modalKeyHandler) {
+            document.removeEventListener("keydown", modalKeyHandler, true);
+            modalKeyHandler = null;
+          }
+        }
+
+        // Open modal via click or keyboard
+        document.querySelectorAll(".clickable-card").forEach((card) => {
+          card.addEventListener("click", function (e) {
+            const serviceKey = this.getAttribute("data-service");
+            const data = serviceData[serviceKey];
+            if (data) {
+              openModal(data, this);
+            }
+          });
+
+          // keyboard accessibility: Enter or Space opens modal
+          card.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              const serviceKey = this.getAttribute("data-service");
+              const data = serviceData[serviceKey];
+              if (data) openModal(data, this);
+            }
+          });
+        });
+
+        if (modalClose) {
+          modalClose.addEventListener("click", closeModal);
+        }
+
+        if (modalBackdrop) {
+          modalBackdrop.addEventListener("click", closeModal);
+        }
+
+        // Close on Escape (in case the other handler is not bound)
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && modal.classList.contains("active")) {
+            closeModal();
+          }
+        });
+
+        // NAVBAR SCROLL EFFECT
+        const navbar = document.querySelector(".navbar-custom");
+        let lastScroll = 0;
+
+        window.addEventListener(
+          "scroll",
+          () => {
+            const currentScroll = window.scrollY;
+            if (navbar) {
+              navbar.classList.toggle("scrolled", currentScroll > 50);
+            }
+            lastScroll = currentScroll;
+          },
+          { passive: true }
+        );
+
+        // PARALLAX ELEMENTS
+        const heroBg = document.getElementById("heroBg");
+        const marketingImg = document.getElementById("marketingImg");
+        const heroSection = document.querySelector(".hero-section");
+        const floatItems = document.querySelectorAll(".float-item");
+
+        // OPTIMIZED PARALLAX SCROLL
+        let scrollTicking = false;
+        let lastScrollY = 0;
+
+        function updateParallax() {
+          const scrollY = lastScrollY;
+
+          if (heroBg) {
+            heroBg.style.transform = `translate3d(0, ${scrollY * 0.4}px, 0)`;
+          }
+
+          if (marketingImg) {
+            const rect = marketingImg.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+            if (isVisible) {
+              const offset = (window.innerHeight - rect.top) * 0.08;
+              marketingImg.style.transform = `translate3d(0, ${Math.min(
+                Math.max(offset, -50),
+                50
+              )}px, 0)`;
+            }
+          }
+
+          scrollTicking = false;
+        }
+
+        window.addEventListener(
+          "scroll",
+          () => {
+            lastScrollY = window.scrollY;
+            if (!scrollTicking) {
+              requestAnimationFrame(updateParallax);
+              scrollTicking = true;
+            }
+          },
+          { passive: true }
+        );
+
+        // MOUSE PARALLAX FOR FLOATING ELEMENTS
+        let mouseX = 0,
+          mouseY = 0,
+          mouseTicking = false;
+
+        function updateMouseParallax() {
+          floatItems.forEach((item, index) => {
+            const speed = 15 + index * 8;
+            const x = mouseX * speed;
+            const y = mouseY * speed;
+            item.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+          });
+          mouseTicking = false;
+        }
+
+        if (heroSection) {
+          heroSection.addEventListener("mousemove", (e) => {
+            const rect = heroSection.getBoundingClientRect();
+            mouseX = (e.clientX - rect.left) / rect.width - 0.5;
+            mouseY = (e.clientY - rect.top) / rect.height - 0.5;
+
+            if (!mouseTicking) {
+              requestAnimationFrame(updateMouseParallax);
+              mouseTicking = true;
+            }
+          });
+        }
+
+        // INTERSECTION OBSERVER FOR SCROLL ANIMATIONS
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px 0px -80px 0px",
+          threshold: 0.15,
+        };
+
+        const scrollObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              scrollObserver.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        document
+          .querySelectorAll(".fade-in, .slide-left, .slide-right")
+          .forEach((el) => {
+            scrollObserver.observe(el);
+          });
+
+        // FAQ ACCORDION FUNCTIONALITY
+        const faqQuestions = document.querySelectorAll(".faq-question");
+
+        faqQuestions.forEach((question) => {
+          question.addEventListener("click", function () {
+            const answer = this.nextElementSibling;
+            const isActive = this.classList.contains("active");
+
+            faqQuestions.forEach((q) => {
+              q.classList.remove("active");
+              q.nextElementSibling.classList.remove("active");
+            });
+
+            if (!isActive) {
+              this.classList.add("active");
+              answer.classList.add("active");
+            }
+          });
+        });
+
+        // CONTACT FORM HANDLING
+        const contactForm = document.getElementById("contactForm");
+        const formStatus = contactForm
+          ? contactForm.querySelector(".form-status")
+          : null;
+
+        if (contactForm) {
+          contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            if (!contactForm.checkValidity()) {
+              contactForm.reportValidity();
+              return;
+            }
+
+            const formData = new FormData(contactForm);
+            const submitBtn = contactForm.querySelector(".btn-submit");
+
+            if (submitBtn) {
+              submitBtn.disabled = true;
+              submitBtn.innerHTML =
+                '<span>SENDING...</span><i class="fas fa-spinner fa-spin"></i>';
+            }
+
+            if (formStatus) {
+              formStatus.textContent = "Sending your message...";
+              formStatus.className = "form-status";
+              formStatus.style.display = "block";
+            }
+
+            setTimeout(() => {
+              if (formStatus) {
+                formStatus.textContent =
+                  "✓ Thank you! We'll get back to you soon.";
+                formStatus.className = "form-status success";
+              }
+
+              contactForm.reset();
+
+              if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML =
+                  '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
+              }
+
+              setTimeout(() => {
+                if (formStatus) {
+                  formStatus.style.display = "none";
+                }
+              }, 5000);
+            }, 1500);
+          });
+        }
+
+        // SMOOTH SCROLL FOR NAVIGATION LINKS
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            const href = this.getAttribute("href");
+            if (href !== "#" && href !== "#home") {
+              e.preventDefault();
+              const target = document.querySelector(href);
+              if (target) {
+                const navHeight = navbar ? navbar.offsetHeight : 80;
+                const targetPosition = target.offsetTop - navHeight;
+
+                window.scrollTo({
+                  top: targetPosition,
+                  behavior: "smooth",
+                });
+
+                const navCollapse = document.getElementById("navbarNav");
+                if (navCollapse && navCollapse.classList.contains("show")) {
+                  const bsCollapse =
+                    bootstrap.Collapse.getInstance(navCollapse);
+                  if (bsCollapse) {
+                    bsCollapse.hide();
+                  }
+                }
+              }
+            }
+          });
+        });
+
+        // REDUCED MOTION PREFERENCE
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          floatItems.forEach((item) => {
+            item.style.animation = "none";
+          });
+
+          if (heroSection) {
+            heroSection.removeEventListener("mousemove", updateMouseParallax);
+          }
+        }
+
+        // INITIAL LOAD
+        window.addEventListener("load", () => {
+          document.body.classList.add("loaded");
+          updateParallax();
+        });
+      })();
+    </script>
+  </body>
+</html>
