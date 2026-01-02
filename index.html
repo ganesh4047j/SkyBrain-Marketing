@@ -4,19 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SkyBrain Marketing | Digital Marketing & Tech Engineering</title>
-    <meta name="description" content="Prioritizing brand growth through strategic SEO, Market Research, and Social Media Dominance. We bridge the gap between data science and creative storytelling.">
+    <meta
+      name="description"
+      content="Prioritizing brand growth through strategic SEO, Market Research, and Social Media Dominance. We bridge the gap between data science and creative storytelling."
+    />
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ganesh4047j.github.io/SkyBrain-Marketing/">
-    <meta property="og:title" content="SkyBrain Marketing | Digital Marketing Dominance">
-    <meta property="og:description" content="Elevate your brand with data-driven digital marketing and high-end tech engineering. Discover our 'Dominance' framework.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/ganesh4047j/SkyBrain-Marketing/383f985fb97de620213292256076fc0188fa0778/Assets/A_hightech_futuristic.jpeg">
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://ganesh4047j.github.io/SkyBrain-Marketing/"
+    />
+    <meta
+      property="og:title"
+      content="SkyBrain Marketing | Digital Marketing Dominance"
+    />
+    <meta
+      property="og:description"
+      content="Elevate your brand with data-driven digital marketing and high-end tech engineering. Discover our 'Dominance' framework."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/ganesh4047j/SkyBrain-Marketing/383f985fb97de620213292256076fc0188fa0778/Assets/A_hightech_futuristic.jpeg"
+    />
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://ganesh4047j.github.io/SkyBrain-Marketing/">
-    <meta property="twitter:title" content="SkyBrain Marketing | Digital Marketing Dominance">
-    <meta property="twitter:description" content="Elevate your brand with data-driven digital marketing and high-end tech engineering. Discover our 'Dominance' framework.">
-    <meta property="twitter:image" content="https://raw.githubusercontent.com/ganesh4047j/SkyBrain-Marketing/383f985fb97de620213292256076fc0188fa0778/Assets/A_hightech_futuristic.jpeg">
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://ganesh4047j.github.io/SkyBrain-Marketing/"
+    />
+    <meta
+      property="twitter:title"
+      content="SkyBrain Marketing | Digital Marketing Dominance"
+    />
+    <meta
+      property="twitter:description"
+      content="Elevate your brand with data-driven digital marketing and high-end tech engineering. Discover our 'Dominance' framework."
+    />
+    <meta
+      property="twitter:image"
+      content="https://raw.githubusercontent.com/ganesh4047j/SkyBrain-Marketing/383f985fb97de620213292256076fc0188fa0778/Assets/A_hightech_futuristic.jpeg"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -131,6 +158,61 @@
         box-shadow: 0 10px 30px rgba(0, 210, 255, 0.4);
       }
 
+      /* Card Container Styling */
+      .marketing-card {
+        background: rgba(255, 255, 255, 0.05); /* Dark background */
+        border-radius: 24px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        height: 100%;
+        cursor: pointer;
+      }
+
+      .marketing-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        border-color: var(--accent-cyan);
+      }
+
+      /* Image Styling */
+      .card-image-container {
+        width: 100%;
+        height: 160px; /* Fixed height for consistency */
+        overflow: hidden;
+      }
+
+      .card-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .marketing-card:hover .card-image-container img {
+        transform: scale(1.1);
+      }
+
+      /* Text Content Styling */
+      .card-content {
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      .card-content h4 {
+        color: #ffffff;
+        font-weight: 700;
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+      }
+
+      .card-content p {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        margin: 0;
+        opacity: 0.8;
+      }
+
       /* HERO SECTION */
       .hero-section {
         position: relative;
@@ -153,9 +235,8 @@
             rgba(0, 102, 255, 0.15),
             rgba(0, 210, 255, 0.15)
           ),
-          url("Assets/A_futuristic_highend.jpeg")
-            center/cover no-repeat;
-        z-index: 1;
+          url("Assets/hero_img.jpeg") center/cover no-repeat;
+        z-index: 2;
         will-change: transform;
       }
 
@@ -1053,6 +1134,15 @@
           font-size: 1.1rem;
         }
 
+        .card-image-container {
+          height: 200px; /* Slightly taller for better 1-column aspect ratio */
+        }
+
+        .marketing-card {
+          max-width: 400px; /* Prevents the card from becoming too wide on large phones */
+          margin: 0 auto; /* Centers the card */
+        }
+
         footer {
           padding: 30px 0;
         }
@@ -1115,6 +1205,15 @@
         }
       }
 
+      @media (max-width: 576px) {
+        .card-image-container {
+          height: 120px;
+        }
+        .card-content h4 {
+          font-size: 1rem;
+        }
+      }
+
       a:focus-visible,
       button:focus-visible,
       input:focus-visible,
@@ -1145,7 +1244,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item">
-              <a class="nav-link" href="#services">SERVICES</a>
+              <a class="nav-link" href="#marketing">SERVICES</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#team">OUR TEAM</a>
@@ -1169,7 +1268,7 @@
       </div>
       <div class="hero-content">
         <h1 class="hero-title">SKYBRAIN MARKETING</h1>
-        <p class="hero-subtitle">
+        <p class="hero-subtitle text-white">
           Prioritizing Growth with Digital Marketing Dominance
         </p>
       </div>
@@ -1317,36 +1416,86 @@
           </div>
         </div>
 
-        <div class="row mt-5">
+        <div class="row mt-5 g-4">
           <div class="col-12 text-center">
-            <p class="text-muted mb-4">
+            <p class="mb-4">
               Click below to dive into our specific 5-minute deep dives:
             </p>
-            <div class="mt-2">
-              <span
-                class="feature-badge marketing-badge"
-                data-service="seo"
-                role="button"
-                >Strategic SEO Deep-Dive</span
-              >
-              <span
-                class="feature-badge marketing-badge"
-                data-service="market-research"
-                role="button"
-                >Research Methodology</span
-              >
-              <span
-                class="feature-badge marketing-badge"
-                data-service="social-media"
-                role="button"
-                >Social Media Marketing</span
-              >
-              <span
-                class="feature-badge marketing-badge"
-                data-service="analytics"
-                role="button"
-                >Brand Analytics</span
-              >
+          </div>
+
+          <div class="col-12 col-md-3 mb-2">
+            <div
+              class="feature-card marketing-card"
+              data-service="seo"
+              role="button"
+            >
+              <div class="card-image-container">
+                <img
+                  src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=400"
+                  alt="SEO"
+                />
+              </div>
+              <div class="card-content">
+                <h4>SEO</h4>
+                <p>Strategic Deep-Dive</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3 mb-2">
+            <div
+              class="feature-card marketing-card"
+              data-service="market-research"
+              role="button"
+            >
+              <div class="card-image-container">
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400"
+                  alt="Research"
+                />
+              </div>
+              <div class="card-content">
+                <h4>Research</h4>
+                <p>Methodology</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3 mb-2">
+            <div
+              class="feature-card marketing-card"
+              data-service="social-media"
+              role="button"
+            >
+              <div class="card-image-container">
+                <img
+                  src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400"
+                  alt="Social Media"
+                />
+              </div>
+              <div class="card-content">
+                <h4>SMM</h4>
+                <p>Social Media Marketing</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3 mb-2">
+            <div
+              class="feature-card marketing-card"
+              data-service="analytics"
+              role="button"
+            >
+              <div class="card-image-container">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400"
+                  alt="Analytics"
+                />
+              </div>
+              <div class="card-content">
+                <h4>Analytics</h4>
+                <p>Brand Insights</p>
+              </div>
             </div>
           </div>
         </div>
@@ -1796,20 +1945,23 @@
         <div class="row align-items-center">
           <div class="col-md-6 text-center text-md-start">
             <p class="footer-copyright">
-              &copy; 2024 <strong>SkyBrain Marketing</strong>. All rights reserved.
+              &copy; 2024 <strong>SkyBrain Marketing</strong>. All rights
+              reserved.
             </p>
           </div>
 
           <div class="col-md-6 text-center text-md-end">
             <p class="footer-credits mb-0">
-              <i class="fas fa-bolt me-2" style="color: var(--accent-green);"></i>
+              <i
+                class="fas fa-bolt me-2"
+                style="color: var(--accent-green)"
+              ></i>
               Powered by Innovation
             </p>
           </div>
         </div>
       </div>
     </footer>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -1883,8 +2035,7 @@
         const marketingData = {
           seo: {
             title: "Strategic SEO: The Science of Search",
-            image:
-              "Assets/Strategic_seo.jpeg",
+            image: "Assets/Strategic_seo.jpeg",
             content: `
             <p>SEO is the backbone of organic growth. In this 5-minute guide, we break down how SkyBrain achieves search dominance.</p>
             <h4>1. Technical Architecture</h4>
@@ -1898,8 +2049,7 @@
           },
           "market-research": {
             title: "Market Research: Identifying The Gap",
-            image:
-              "Assets/Market_research_identifying.jpeg",
+            image: "Assets/Market_research_identifying.jpeg",
             content: `
             <p>Before spending a single rupee on ads, we listen. Market research is the "Intelligence" phase of our Dominance framework.</p>
             <h4>Competitor Benchmarking</h4>
@@ -1912,8 +2062,7 @@
           },
           "social-media": {
             title: "SMM: Building a Digital Community",
-            image:
-              "Assets/Smm_building.jpeg",
+            image: "Assets/Smm_building.jpeg",
             content: `
             <p>Social Media Marketing is no longer just about posting photos. It is about building a living, breathing community around your brand.</p>
             <h4>Platform-Specific Strategy</h4>
@@ -1926,8 +2075,7 @@
           },
           analytics: {
             title: "Brand Analytics: Decisions over Guesses",
-            image:
-              "Assets/Brand_analytics_decisions.jpeg",
+            image: "Assets/Brand_analytics_decisions.jpeg",
             content: `
             <p>Data is just noise without interpretation. Our analytics service turns numbers into clear business directives.</p>
             <h4>Full-Funnel Tracking</h4>
@@ -1940,7 +2088,7 @@
           },
         };
 
-        document.querySelectorAll(".marketing-badge").forEach((badge) => {
+        document.querySelectorAll(".marketing-card").forEach((badge) => {
           badge.addEventListener("click", function () {
             const serviceKey = this.getAttribute("data-service");
             const data = marketingData[serviceKey];
