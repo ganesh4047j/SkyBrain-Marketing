@@ -2359,59 +2359,64 @@
           });
         });
 
-        // CONTACT FORM HANDLING
+        // CONTACT FORM HANDLING - Enabled via mailto
         const contactForm = document.getElementById("contactForm");
-        const formStatus = contactForm
-          ? contactForm.querySelector(".form-status")
-          : null;
+const formStatus = contactForm ? contactForm.querySelector(".form-status") : null;
 
-        if (contactForm) {
-          contactForm.addEventListener("submit", function (e) {
-            e.preventDefault();
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-            if (!contactForm.checkValidity()) {
-              contactForm.reportValidity();
-              return;
-            }
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
 
-            const formData = new FormData(contactForm);
-            const submitBtn = contactForm.querySelector(".btn-submit");
+    // 1. Gather form values
+    const name = contactForm.querySelector('[name="name"]').value;
+    const email = contactForm.querySelector('[name="email"]').value;
+    const subjectLine = contactForm.querySelector('[name="subject"]').value || "New Message from SkyBrain Website";
+    const message = contactForm.querySelector('[name="message"]').value;
 
-            if (submitBtn) {
-              submitBtn.disabled = true;
-              submitBtn.innerHTML =
-                '<span>SENDING...</span><i class="fas fa-spinner fa-spin"></i>';
-            }
+    // 2. Construct the body with clean line breaks
+    // We use standard backticks and actual line breaks. 
+    // encodeURIComponent will handle the conversion to %0D%0A for us.
+    const recipient = "skybrainsoftwares@gmail.com";
+    const bodyText = `Name: ${name}
+E-mail: ${email}
+Message: ${message}`;
 
-            if (formStatus) {
-              formStatus.textContent = "Sending your message...";
-              formStatus.className = "form-status";
-              formStatus.style.display = "block";
-            }
+    const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(bodyText)}`;
 
-            setTimeout(() => {
-              if (formStatus) {
-                formStatus.textContent =
-                  "✓ Thank you! We'll get back to you soon.";
-                formStatus.className = "form-status success";
-              }
+    // 3. Update UI feedback
+    const submitBtn = contactForm.querySelector(".btn-submit");
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>OPENING MAIL...</span><i class="fas fa-external-link-alt"></i>';
+    }
 
-              contactForm.reset();
+    if (formStatus) {
+      formStatus.textContent = "Redirecting to your email client...";
+      formStatus.className = "form-status success";
+      formStatus.style.display = "block";
+    }
 
-              if (submitBtn) {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML =
-                  '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
-              }
+    // 4. Trigger the email client
+    window.location.href = mailtoUrl;
 
-              setTimeout(() => {
-                if (formStatus) {
-                  formStatus.style.display = "none";
-                }
-              }, 5000);
-            }, 1500);
-          });
-        }
+    // 5. Reset form after a short delay
+    setTimeout(() => {
+      contactForm.reset();
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
+      }
+      if (formStatus) {
+        formStatus.style.display = "none";
+      }
+    }, 3000);
+  });
+}
 
         // SMOOTH SCROLL FOR NAVIGATION LINKS
         document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
