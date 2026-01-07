@@ -598,14 +598,15 @@
         right: 20px;
         width: 45px;
         height: 45px;
-        background: var(--accent-cyan);
-        border: none;
+        /* Change background to Dark Blue so the white icon is visible */
+        background: #020774;
+        border: 2px solid #fff;
         border-radius: 50%;
-        color: white;
+        color: #fff; /* White 'X' icon */
         font-size: 1.3rem;
         cursor: pointer;
         transition: all 0.3s ease;
-        z-index: 10;
+        z-index: 10001; /* Ensure it stays above modal content */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -613,7 +614,8 @@
 
       .modal-close:hover {
         transform: rotate(90deg) scale(1.1);
-        background: var(--accent-blue);
+        background: #fff;
+        color: #020774; /* Flip colors on hover */
       }
 
       .modal-body {
@@ -1132,12 +1134,12 @@
         }
 
         .nav-logo {
-        height: 45px;
-        width: 45px;
-        margin-right: 12px;
-        border-radius: 8px;
-        transition: height 0.3s ease;
-      }
+          height: 45px;
+          width: 45px;
+          margin-right: 12px;
+          border-radius: 8px;
+          transition: height 0.3s ease;
+        }
 
         .card-image-container {
           height: 200px; /* Slightly taller for better 1-column aspect ratio */
@@ -1218,12 +1220,12 @@
         }
 
         .nav-logo {
-        height: 35px;
-        width: 35px;
-        margin-right: 12px;
-        border-radius: 8px;
-        transition: height 0.3s ease;
-      }
+          height: 35px;
+          width: 35px;
+          margin-right: 12px;
+          border-radius: 8px;
+          transition: height 0.3s ease;
+        }
         .card-content h4 {
           font-size: 1rem;
         }
